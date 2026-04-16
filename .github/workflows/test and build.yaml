@@ -1,0 +1,28 @@
+name: Testing and Building my app
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Getting my first code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Testing app
+        run: npm test
+
+
+
+
+
+

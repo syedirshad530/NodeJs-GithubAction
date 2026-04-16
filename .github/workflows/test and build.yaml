@@ -1,6 +1,8 @@
 name: Testing and Building my app
 
 on: push
+permissions:
+  contents: write
 
 jobs:
   test:

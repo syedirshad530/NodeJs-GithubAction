@@ -9,6 +9,7 @@ function App() {
         <p>
           Welcome to devOpsChannel. Please subscribe if you like my sharing!
         </p>
+        <h1>Learning Git and React-js</h1>
         <a
           className="App-link"
           href="https://reactjs.org"

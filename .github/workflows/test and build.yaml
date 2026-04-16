@@ -44,7 +44,7 @@ jobs:
         run: npm ci
 
       - name: Build app
-        run: npm start
+        run: npm ci
 
   deploy:
     runs-on: ubuntu-latest

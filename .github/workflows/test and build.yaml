@@ -3,7 +3,7 @@ name: Testing, Building and Deploying my app
 on:
   push:
     branches:
-      - main   # trigger only on main branch
+      - main
 
 permissions:
   contents: write
@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4   # ✅ fixed version
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4   # ✅ fixed version
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -27,7 +27,6 @@ jobs:
       - name: Build app
         run: npm run build
 
-      # ✅ Upload build output so deploy job can use it
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -61,7 +60,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ✅ Download build from build job
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
@@ -73,5 +71,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
 
           

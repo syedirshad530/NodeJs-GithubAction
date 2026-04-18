@@ -11,7 +11,7 @@ function App() {
         </p>
         <h1>Learning Git and React-js</h1>
         <h2>Welcome to Github Actions</h2>
-        <h3>-------welcome to Techzy consulting----------</h3>
+        <h3>-------welcome to Techzy consulting-------</h3>
         <a
           className="App-link"
           href="https://reactjs.org"
